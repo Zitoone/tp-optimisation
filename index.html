@@ -22,7 +22,6 @@
 </head>
 
 <body>
-    <!-- Modif de la div en HEADER, Logo inclus dans le lien, possibilité de suppr le h1 caché qui ne sert a rien -->
     <header class="header">
         <a href="/">
             <i class="fa-solid fa-cookie-bite" aria-label="Logo"></i>
@@ -31,14 +30,14 @@
         <button class="menu-toggle" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
         </button>
-    <nav> <!-- Ajout d'une balise NAV pour le menu de navigation, et de LI autour des liens -->
-        <ul id="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
         <i id="Cart" class="fa-solid fa-cart-shopping" aria-label="Cart"></i>
 
@@ -54,9 +53,7 @@
         </div>
     </header>
 
-<!-- Modif des div avec un MAIN puis des SECTION, puis modification des balises titres -->
-    <main id="main-content"> 
-        
+    <main id="main-content">        
         <section class="section1">
             <h2>Cookie Cookie Backery shop</h2>
             <div>
@@ -68,21 +65,19 @@
                         <a href="#contact"><button type="submit">Contact Us</button></a>
                     </div>
                 </article>
-                <img src="img/5.webp" alt="Picture of delicious cookies and a glass of milk">
+                <img src="img/5.webp" alt="Picture of delicious cookies and a glass of milk" loading="lazy">
             </div>
         </section>
 
-<!--  id addToCart utilisé plusieurs fois changer en class -->
         <section id="menu" class="section2">
             <div>
                 <h2>Our menu</h2>
                 <h3>Explore Our Delectable Cookies</h3>
                 <p>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</p>
             </div>
-
             <div>
                 <article> 
-                    <img src="img/1.webp" alt="cookies">
+                    <img src="img/1.webp" alt="cookies" loading="lazy">
                     <div>
                         <h4>Chocolate Chip</h4>
                         <p>Our classic chocolate chip cookies, baked to perfection.</p>
@@ -92,9 +87,8 @@
                         </div>
                     </div>
                 </article>
-
                 <article>
-                    <img src="img/2.webp" alt="cookie, glass of milk">
+                    <img src="img/2.webp" alt="cookie, glass of milk" loading="lazy">
                     <div>
                         <h4>Oatmeal Raisin</h4>
                         <p>Chewy oatmeal cookies with plump raisins</p>
@@ -105,7 +99,7 @@
                     </div>
                 </article>
                 <article>
-                    <img src="img/3.webp" alt="Bol of macarons">
+                    <img src="img/3.webp" alt="Bol of macarons" loading="lazy">
                     <div>
                         <h4>Peanut Butter</h4>
                         <p>Rich and creamy peanut butter cookies.</p>
@@ -116,7 +110,7 @@
                     </div>
                 </article>
                 <article>
-                    <img src="img/4.webp" alt="Macarons">
+                    <img src="img/4.webp" alt="Macarons" loading="lazy">
                     <div>
                         <h4>Sugar</h4>
                         <p>Soft and chewy sugar cookies, perfect for any occasion.</p>
@@ -130,7 +124,7 @@
         </section>
 
         <section id="about" class="section3">
-            <img src="img/6.webp" alt="heart macarons">
+            <img src="img/6.webp" alt="heart macarons" loading="lazy">
             <article>
                 <h2>About us</h2>
                 <h3>Baking with Passion and Tradition</h3>
@@ -165,14 +159,12 @@
                 <i class="fa-solid fa-cookie-bite" aria-label="Logo"></i>
                 <h5>Cookie Cookie</h5>    
             </a>
-
             <div class="legal">  
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
                 <a href="#">Refund Policy</a>
             </div>
         </article>
-
         <div class="footer2">
             <div class="apropos">
                 <p>Mon adresse : <br/> 140 avenue jacques troussel <br> 83136 Rocbaron.</p>    
@@ -294,7 +286,5 @@
   }
 }
 </script>
-
 </body>
-
 </html>
