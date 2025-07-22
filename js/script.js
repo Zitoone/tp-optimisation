@@ -1,28 +1,10 @@
-// Liste des liens à ajouter
-const links = [
+// Liste des liens à ajouter = inutile
+/* const links = [
     { href: '/', text: 'Home' },
     { href: '/menu', text: 'Menu' },
     { href: '/#about', text: 'About' },
     { href: '/#contact', text: 'Contact' }
-];
-
-// Fonction pour ajouter des destinations aux liens existants
-function updateAnchors(links, targetElementId) {
-    // Sélectionner l'élément cible
-    const ul = document.getElementById(targetElementId);
-    // Sélectionner tous les éléments <a> enfants de l'élément <ul>
-    const anchors = ul.querySelectorAll('a');
-
-    // Parcourir chaque lien dans la liste
-    links.forEach((link, index) => {
-        // Mettre à jour l'attribut href et le texte de chaque ancre
-        anchors[index].href = link.href;
-        anchors[index].textContent = link.text;
-    });
-}
-
-// Appel de la fonction pour mettre à jour les ancres
-updateAnchors(links, 'nav-links');
+]; */
 
 
 // Gestion du menu responsive
@@ -31,12 +13,11 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
 
-var button = document.querySelector('#addtocart');
-
-
 // Ajout au panier
+let button = document.querySelector('#addtocart'); // Cette declaration de variable ne sert a rien comme elle est redéclarer ensuite
 
-document.querySelectorAll('#addtoCart').forEach(button => {
+
+document.querySelectorAll('.addToCart').forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.getAttribute('data-name');
         const productPrice = button.getAttribute('data-price');
@@ -57,8 +38,7 @@ document.querySelectorAll('#addtoCart').forEach(button => {
 
 
 // Affichage du panier
-
-document.getElementById('cart').addEventListener('click', () => {
+document.getElementById('Cart').addEventListener('click', () => {
     const cartContent = document.getElementById('cart-content');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
@@ -97,6 +77,11 @@ const closeCartButton = document.getElementById('close-cart');
 
 // Ajouter un événement de clic pour fermer le panier
 closeCartButton.addEventListener('click', () => {
+    document.getElementById('cart-content').style.display = 'none';
+});
+
+// J'ai ajouté un évenement au scroll pour que le panier se ferme
+window.addEventListener('scroll',() => {   
     document.getElementById('cart-content').style.display = 'none';
 });
 
