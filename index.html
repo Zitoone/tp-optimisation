@@ -25,7 +25,7 @@
     <!-- Modif de la div en HEADER, Logo inclus dans le lien, possibilité de suppr le h1 caché qui ne sert a rien -->
     <header class="header">
         <a href="/">
-            <i class="fa-solid fa-cookie-bite"></i>
+            <i class="fa-solid fa-cookie-bite" aria-label="Logo"></i>
             <h1>Cookie Cookie</h1>    
         </a>
         <button class="menu-toggle" aria-label="Toggle menu">
@@ -40,7 +40,7 @@
         </ul>
     </nav>
 
-        <i id="Cart" class="fa-solid fa-cart-shopping"></i>
+        <i id="Cart" class="fa-solid fa-cart-shopping" aria-label="Cart"></i>
 
         <div id="cart-content" style="display: none;">
             <button id="close-cart">X</button>
@@ -146,9 +146,14 @@
             <h3>Get in Touch</h3>
             <p>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</p>
             <form class="formulaire">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Message">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name">
+
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email">
+
+                <label for="message"></label>
+                <textarea name="message" id="message" name="message" placeholder="Message"></textarea>
                 <button>Submit</button>
             </form>
         </section>
@@ -157,7 +162,7 @@
     <footer class="footer">
         <article>
             <a href="/">
-                <i class="fa-solid fa-cookie-bite"></i>
+                <i class="fa-solid fa-cookie-bite" aria-label="Logo"></i>
                 <h5>Cookie Cookie</h5>    
             </a>
 
@@ -185,9 +190,9 @@
                 </ul>
             </div>
             <div class="social">
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/home?lang=fr"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" aria-label="Lien vers Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/home?lang=fr" aria-label="Lien vers Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.facebook.com/" aria-label="Lien vers X"><i class="fa-brands fa-twitter"></i></a>
             </div>
             <div>
                 <h4>Inscription à la newsletter</h4>
